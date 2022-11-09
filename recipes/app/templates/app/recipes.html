@@ -1,0 +1,15 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <h1>Recipes: {{ recipes_count }}</h1>
+    <hr width="500px" align="left">
+    {% for recipe in recipes %}
+        <div class="p_block">
+            <h2>{{ recipe.name }}</h2>
+            <p>{{ recipe.description }}</p>
+            <p>difficult: {{ recipe.difficult }}</p>
+            <img src='{{ recipe.image.url }}' width="500px" height="350">
+            <hr width="500px" align="left">
+        </div>
+    {% endfor %}
+{% endblock content %}

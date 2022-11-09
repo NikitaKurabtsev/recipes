@@ -7,6 +7,9 @@ name = "pypi"
 python-dotenv = "*"
 django = "*"
 pillow = "*"
+django-crispy-forms = "*"
+isort = "*"
+crispy-bootstrap5 = "*"
 
 [dev-packages]
 
