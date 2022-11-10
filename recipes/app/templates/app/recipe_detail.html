@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+    <br>
+    <div class="col d-flex justify-content-center">
+        <div class="card" style="width: 100rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ recipe.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Difficult: {{ recipe.difficult }}</h6>
+                <!-- <img class="card-img-top" src="{{ recipe.image.url }}" alt="Card image cap" height="400px"> -->
+                <img class="card-img-top" 
+                     src="{{ recipe.image.url }}" 
+                     class="img-fluid" 
+                     alt="Responsive image" 
+                     width="300px"
+                     height="600px"
+                />
+                <p class="card-text">{{ recipe.description }}</p>
+                <a href="#" class="btn btn-primary">view details</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
