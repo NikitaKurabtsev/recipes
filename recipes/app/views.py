@@ -1,6 +1,4 @@
-from django.http import HttpResponse
-from django.shortcuts import render, get_object_or_404
-from django.db.models import Q
+from django.shortcuts import get_object_or_404, render
 
 from app.models import Recipe
 
@@ -25,3 +23,9 @@ def detail_recipe(request, pk):
     }
 
     return render(request, 'app/recipe_detail.html', context)
+
+
+def recipe_difficult_detail(request, difficult):
+    recipe_difficult = Recipe.objects.filter(difficult__icontains=difficult)
+    
+    return render(request, 'app/difficult.html', {'recipe_difficult': recipe_difficult})

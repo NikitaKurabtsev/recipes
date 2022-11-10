@@ -1,6 +1,10 @@
 from django.db import models
 
 
+class Difficult(models.Model):
+    pass
+
+
 class Recipe(models.Model):
     CHOICES = (
         ('EASY', 'Easy'),
