@@ -28,11 +28,11 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    Difficult
                     </a>
                     <ul class="dropdown-menu">
-                    {% for recipe in recipes %}
-                    <li><a class="dropdown-item" href="{% url 'app:difficult' recipe.difficult %}">{{ recipe.difficult }}</a></li>
+                    {% for difficult in recipe_difficult %}
+                    <li><a class="dropdown-item" href="{% url 'app:difficult' difficult.difficult %}">{{ difficult.difficult }}</a></li>
                     <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li> -->

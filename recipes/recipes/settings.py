@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'app.apps.AppConfig',
+    'accounts.apps.AccountConfig',
 
     'crispy_forms',
     'crispy_bootstrap5',
@@ -72,6 +73,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'app.context_processors.recipe_context',
+                'app.context_processors.recipe_difficult',
             ],
         },
     },
@@ -108,6 +110,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
 
 
 # Internationalization

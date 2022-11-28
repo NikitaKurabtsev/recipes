@@ -26,6 +26,6 @@ def detail_recipe(request, pk):
 
 
 def recipe_difficult_detail(request, difficult):
-    recipe_difficult = Recipe.objects.filter(difficult__icontains=difficult)
+    recipe_difficult = Recipe.objects.filter(difficult__difficult__icontains=difficult)
     
     return render(request, 'app/difficult.html', {'recipe_difficult': recipe_difficult})
